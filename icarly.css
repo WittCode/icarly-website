@@ -1,0 +1,509 @@
+@font-face {
+    font-family: 'iCarly-font';
+    src: url(./iCarly.ttf);
+}
+
+body {
+    background-color: #24f1fc;
+    font-family: 'iCarly-font';
+    overflow: hidden;
+}
+
+/* The purple container at the top. */
+#icarly-container {
+    position: relative;
+    background-color: #7C2899;
+    height: 50vh;
+    border: 5px solid #fff53d;
+    border-radius: 10px;
+    top: 5vh;
+    margin: 0 3vw;
+}
+
+/* The shape behind the iCarly title. */
+#icarly-shape {
+    position: absolute;
+    background-color: #D2008F;
+    clip-path: polygon(0 0, 100% 27%, 100% 78%, 0 100%);
+    width: 20vw;
+    height: 18vh;
+    top: -6vh;
+    left: 14vw;
+}
+
+/* The iCarly title */
+#icarly {
+    position: absolute;
+    left: 14vw;
+    top: -8vh;
+}
+
+/* To center absolute container you need to set left and right to 0
+to specify how far to offset the margin edges from the sides of the window. */
+
+/* The navigation bar containing the blue boxes. */
+#icarly-nav {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    top: 15.5vh;
+    font-size: 2em;
+}
+
+/* The anchor tags inside the nav bar. */
+a {
+    color: white;
+    text-decoration: none;
+    border: 5px solid #fff53d;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #7CCEEA;
+    font-weight: bold;
+    margin: 0 0.5vw;
+}
+
+/* The furthest background with the iCarly family on it. */
+#icarly-family {
+    position: absolute;
+    background-color: #fff53d;
+    height: 18vh;
+    width: 13vw;
+    right: 10vw;
+    border-radius: 10px;
+    top: -6vh;
+}
+
+/* The second background behind the iCarly family. */
+#icarly-family-bg {
+    position: absolute;
+    background-color: #A4C83F;
+    height: 16vh;
+    width: 11vw;
+    border-radius: 10px;
+    border: 5px solid white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+/* The picture of the iCarly family. */
+#icarly-family-pic {
+    position: absolute;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 11vw;
+    height: 20vh;
+}
+
+/* The center of the webpage aka the white background part. */
+section {
+    position: relative;
+    background-color: white;
+    height: 50vh;
+    border: 5px solid #fff53d;
+    border-radius: 50% 50% 10px 10px;
+    margin: 0 3vw;
+    bottom: 22vh;
+}
+
+/* Background to where the iCarly video plays. */
+#icarly-video {
+    position: absolute;
+    background-color: #E3E057;
+    top: -2vh;
+    z-index: 2;
+    height: 64.2vh;
+    width: 36vw;
+    border-radius: 5px;
+    left: -2vw;
+}
+
+/* The actual video or picture of video. */
+#live-show {
+    position: absolute;
+    object-fit: cover;
+    width: 35vw;
+    height: 55vh;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 2vh;
+    outline: none;
+}
+
+/* The control part of the video. */
+#video-controls {
+    position: absolute;
+    background-color: #D0FDFE;
+    border-radius: 5px;
+    width: 36vw;
+    height: 11vh;
+    bottom: -5vh;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+#stop-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    clip-path: circle(50% at 50% 50%);
+    height: 5vh;
+    width: 5vh;
+    background-color: #7ED0E9;
+    left: 4vw;
+}
+
+#play-triangle {
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    background-color: black;
+    height: 3vh;
+    width: 1vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: .25vw;
+    margin: auto auto;
+}
+
+#play-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 1vw;
+    clip-path: circle(50% at 50% 50%);
+    height: 5vh;
+    width: 5vh;
+    background-color: #7ED0E9;
+}
+
+#stop-square {
+    background-color: black;
+    height: 2vh;
+    width: 1vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto auto;
+}
+
+#play-button:hover, #stop-button:hover {
+    cursor: pointer;
+}
+
+/* The seekbar for the video that is playing. */
+#scroll {
+    position: absolute;
+    border-radius: 5px;
+    background-color: #F4EFF8;
+    width: 26vw;
+    height: 5vh;
+    top: 0;
+    bottom: 0;
+    right: 2vw;
+    margin: auto 0;
+}
+
+/* The current time that is inside the seekbar. */
+#seekslider {
+    position: absolute;
+    background-color: #3A81FF;
+    width: 100%;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+/* The h1 cool title. */
+#cool-webcast {
+    position: absolute;
+    left: 35vw;
+    font-size: 2.5em;
+}
+
+/* Purple rectangle with Carly pic and stars. */
+#carly {
+    position: absolute;
+    background-color: #7C2899;
+    width: 45vw;
+    height: 15vh;
+    left: 35vw;
+    top: 10vh;
+    border: 5px solid #fff53d;
+    border-radius: 10px;
+}
+
+/* The photo of Carly. */
+#carly-photo {
+    position: absolute;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+    left: 2vw;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+/* The container holding Sam's stars and photo. */
+#sam {
+    position: absolute;
+    background-color: #7C2899;
+    width: 45vw;
+    height: 15vh;
+    left: 35vw;
+    top: 26vh;
+    border: 5px solid #fff53d;
+    border-top: none;
+    border-radius: 10px;
+}
+
+/* The photo of Sam. */
+#sam-photo {
+    position: absolute;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+    left: 2vw;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+/* The stars to the right of the Carly and Sam photos. */
+.star {
+    position: absolute;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: white;
+    height: 5vh;
+    width: 2vw;
+    left: 10vw;
+}
+
+/* The position of each of the stars. */
+.position1 {
+    position: absolute;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+}
+
+.position2 {
+    position: absolute;
+    margin: auto 3vw;
+    top: 0;
+    bottom: 0;
+}
+
+.position3 {
+    position: absolute;
+    margin: auto 6vw;
+    top: 0;
+    bottom: 0;
+}
+
+.position4 {
+    position: absolute;
+    margin: auto 9vw;
+    top: 0;
+    bottom: 0;
+}
+
+/* The grey pole with the flags. */
+#pole {
+    position: absolute;
+    background-color: #A4A5AC;
+    height: 60vh;
+    width: 1vw;
+    right: 2.5vw;
+    bottom: 0;
+
+}
+
+/* The flag at the top of the pole. */
+#flag-1 {
+    position: absolute;
+    display: table;
+    background-color: #F99C43;
+    height: 13%;
+    width: 1100%;
+    right: -90px;
+    cursor: pointer;
+    top: 5%;
+    line-height: 550%;
+    text-align: center;
+    color: #7C2899;
+    font-weight: bold;
+    box-shadow: 0 0 10px 10px #D2008F;
+    transform: rotate(20deg);
+}
+
+#flag-2 {
+    position: absolute;
+    background-color: #A9CB42;
+    height: 75px;
+    width: 200px;
+    right: -90px;
+    top: 40%;
+    box-shadow: 0 0 10px 10px #E1E745;
+    line-height: 75px;
+    text-align: center;
+    color: #43521b;
+    font-weight: bold;
+    transform: rotate(-20deg);
+    cursor: pointer;
+}
+
+#flag-3 {
+    position: absolute;
+    background-color: #A9CB42;
+    height: 75px;
+    width: 200px;
+    right: -90px;
+    top: 75%;
+    box-shadow: 0 0 10px 10px #E1E745;
+    line-height: 75px;
+    text-align: center;
+    color: #43521b;
+    font-weight: bold;
+    transform: rotate(20deg);
+    cursor: pointer;
+}
+
+#three-container {
+    position: absolute;
+    left: 42vw;
+    top: 41vh;
+}
+
+.red-box {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+    font-size: 1.5em;
+    background-color: #EC4A5D;
+    color: white;
+    margin-right: 3vw;
+    cursor: pointer;
+}
+
+footer {
+    position: relative;
+    background-color: #FFAC46;
+    height: 17vh;
+    bottom: 23vh;
+    border: 5px solid #fff53d;
+    border-radius: 10px;
+    margin: 0 3vw;
+}
+
+#search {
+    position: absolute;
+    clip-path: ellipse(50% 25% at 50% 50%);
+    background-color: #FCFEC4;
+    left: 40vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#send-us-videos {
+    position: absolute;
+    clip-path: ellipse(50% 25% at 50% 50%);
+    background-color: #7ED0E9;
+    right: 10vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 300px;
+    width: 200px;
+    line-height: 300px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#i {
+    font-size: 150px;
+    color: #fff53d;
+    -webkit-text-stroke: 0.5px darkblue; /* width and color */
+    text-shadow: 0px 0px 0 rgb(239,229,45),
+                 1px -1px 0 rgb(224,214,30),
+                 2px -2px 0 rgb(208,198,14),
+                 3px -3px  0 rgb(192,182,0),
+                 4px -4px 3px rgba(0,0,0,0.6),
+                 4px -4px 1px rgba(0,0,0,0.5),
+                 0px 0px 3px rgba(0,0,0,.2);
+ }
+
+#car {
+    font-size: 150px;
+    color: #24f1fc;
+    -webkit-text-stroke: 0.5px darkblue; /* width and color */
+    text-shadow: 0px 0px 0 rgb(20,225,236),
+                 1px -1px 0 rgb(5,210,221),
+                 2px -2px 0 rgb(-11,194,205),
+                 3px -3px  0 rgb(-27,178,189),
+                 4px -4px 3px rgba(0,0,0,0.6),
+                 4px -4px 1px rgba(0,0,0,0.5),
+                 0px 0px 3px rgba(0,0,0,.2);
+ }
+
+ #ly {
+       font-size: 150px;
+       color: #24f1fc;
+       -webkit-text-stroke: 0.5px darkblue; /* width and color */
+       text-shadow: 0px 0px 0 rgb(7,212,223),
+                    -1px -1px 0 rgb(-22,183,194),
+                    -2px -2px 0 rgb(-51,154,165),
+                    -3px -3px 0 rgb(-80,125,136),
+                    -4px -4px  0 rgb(-109,96,107),
+                    -5px -5px 4px rgba(0,0,0,0.48),
+                    -5px -5px 1px rgba(0,0,0,0.5),
+                    0px 0px 4px rgba(0,0,0,.2);
+ }
+
+ #com {
+       font-size: 100px;
+       color: #fff53d;
+       -webkit-text-stroke: 0.5px darkblue; /* width and color */
+       text-shadow: 0px 0px 0 rgb(226,216,32),
+                    -1px -1px 0 rgb(197,187,3),
+                    -2px -2px 0 rgb(168,158,0),
+                    -3px -3px 0 rgb(139,129,0),
+                    -4px -4px  0 rgb(110,100,0),
+                    -5px -5px 4px rgba(0,0,0,0.48),
+                    -5px -5px 1px rgba(0,0,0,0.5),
+                    0px 0px 4px rgba(0,0,0,.2);
+ }
+
+ @media (max-width: 1432px) {
+
+    #pole {
+        display: none;
+    }
+
+ }
+
+ @media (max-width: 1550px) {
+
+    #three-container {
+        display: none;
+    }
+
+ }

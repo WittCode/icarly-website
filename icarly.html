@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCarly</title>
+    <link rel="stylesheet" href="./icarly.css">
+</head>
+
+<body>
+
+    <!-- The top part of the website with the nav bar and image -->
+    <header>
+        <div id="icarly-container">
+            <div id="icarly-shape"></div>
+            <h1 id="icarly"><span id="i">i</span><span id="car">Car</span><span id="ly">ly</span><span
+                    id="com">.com</span></h1>
+            <div id="icarly-family">
+                <div id="icarly-family-bg"></div>
+                <img id="icarly-family-pic" src="./pics/icarly-fam.png" alt="icarly-fam">
+            </div>
+            <nav id="icarly-nav">
+                <a href="#"><span style="color: #7C2899;">i</span>Blogs</a>
+                <a href="#"><span style="color: #7C2899;">i</span>Snaps</a>
+                <a href="#"><span style="color: #7C2899;">i</span>News</a>
+                <a href="#"><span style="color: #7C2899;">i</span>Video</a>
+                <a href="#"><span style="color: #7C2899;">i</span>Play</a>
+                <a href="#"><span style="color: #7C2899;">i</span>Songs</a>
+                <a href="#"><span style="color: #7C2899;">i</span>Need Help!</a>
+                <a href="#">Send Us Stuff</a>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div id="icarly-video">
+            <video id="live-show">
+                <source src="./webshow.mp4" type="video/mp4">
+            </video>
+            <div id="video-controls">
+                <div id="play-button">
+                    <div id="play-triangle"></div>
+                </div>
+                <div id="stop-button">
+                    <div id="stop-square"></div>
+                </div>
+                <div id="scroll">
+                    <input id="seekslider" type="range" min="0" max="100" value="0" step="1"></div>
+                </div>
+            </div>
+        </div>
+        <h1 id="cool-webcast"><span style="color: #7C2899;">cool webcast</span> <span
+                style="color: #B9D26D;">highlights</span></h1>
+        <div id="carly">
+            <img id="carly-photo" src="./pics/carly.jpg" alt="carly" style="height: 75px; width: 75px;">
+            <div class="position1 star"></div>
+            <div class="position2 star"></div>
+            <div class="position3 star"></div>
+            <div class="position4 star"></div>
+        </div>
+        <div id="sam">
+            <img id="sam-photo" src="./pics/sam.jpg" alt="sam" style="height: 75px; width: 75px;">
+            <div class="position1 star"></div>
+            <div class="position2 star"></div>
+            <div class="position3 star"></div>
+            <div class="position4 star"></div>
+        </div>
+        <div id="pole">
+            <div id="flag-1">
+                cool webcast highlights
+            </div>
+            <div id="flag-2">your videos</div>
+            <div id="flag-3">awesome extras</div>
+        </div>
+        <div id="three-container">
+            <div class="red-box">see more videos</div>
+            <div class="red-box">upload video</div>
+            <div class="red-box">send to a friend</div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="search">SEARCH OUR SITE</div>
+        <div id="send-us-videos">SEND US YOUR VIDEOS</div>
+    </footer>
+
+    <script>
+
+        var iCarlyVideo = document.getElementById('live-show');
+        var playButton = document.getElementById('play-button');
+        var stopButton = document.getElementById('stop-button');
+        var seekslider = document.getElementById('seekslider');
+
+        playButton.addEventListener('click', function () {
+            iCarlyVideo.play();
+        });
+
+        stopButton.addEventListener('click', function () {
+            iCarlyVideo.pause();
+        });
+
+        iCarlyVideo.addEventListener('timeupdate', function () {
+            var nt = iCarlyVideo.currentTime * (100 / iCarlyVideo.duration);
+            seekslider.value = nt;
+        });
+
+        seekslider.addEventListener('change', function () {
+            var seekto = iCarlyVideo.duration * (seekslider.value / 100);
+            iCarlyVideo.currentTime = seekto;
+        });
+
+    </script>
+
+
+</body>
+
+</html>
